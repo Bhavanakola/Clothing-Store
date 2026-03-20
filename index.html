@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trendy Boutique 👗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+
+<header>
+<nav>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('shop')">Shop</a>
+<a onclick="showPage('cart')">Cart</a>
+</nav>
+
+<input type="text" id="search" placeholder="Search clothes..."
+onkeyup="searchProduct()">
+</header>
+
+<!-- HOME -->
+<section id="home" class="page hero">
+<h1>Trendy Boutique 👗</h1>
+<p>Discover your style with our latest fashion</p>
+<button onclick="showPage('shop')">Start Shopping</button>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="page products">
+<h2>Fashion Collection</h2>
+<div id="productBox" class="grid"></div>
+</section>
+
+<!-- DETAILS -->
+<section id="details" class="page products">
+<div id="detailBox"></div>
+
+<br>
+Size:
+<select id="size">
+<option>S</option>
+<option>M</option>
+<option>L</option>
+</select>
+
+<br><br>
+Qty <input type="number" id="qty" value="1">
+
+<br><br>
+<button onclick="addCart()">Add to Cart</button>
+<button onclick="buyNow()">Buy Now</button>
+</section>
+
+<!-- CART -->
+<section id="cart" class="page cart">
+<h2>Your Cart 🛒</h2>
+<div id="cartItems"></div>
+<h2 id="total"></h2>
+</section>
+
+<!-- THANK YOU -->
+<section id="thanks" class="page hero">
+<h1>🎉 Order Placed Successfully!</h1>
+<button onclick="showPage('shop')">Continue Shopping</button>
+</section>
+
+<!-- IMAGE PREVIEW -->
+<div id="preview" class="preview" onclick="hidePreview()">
+<img id="previewImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body{
+font-family:Arial;
+margin:0;
+background:#fdf6f9;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(to right,#ff7e5f,#feb47b);
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+/* PAGES */
+.page{
+display:none;
+padding:30px;
+text-align:center;
+}
+
+.hero{
+padding:60px;
+background:#fff0f5;
+}
+
+/* GRID */
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* CARD */
+.card{
+background:white;
+width:220px;
+margin:15px;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 10px #ccc;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:contain;
+object-position: center;
+cursor:pointer;
+}
+
+/* BUTTON */
+button{
+padding:8px 15px;
+background:#ff4d6d;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* INPUT */
+input,select{
+padding:6px;
+margin:5px;
+}
+
+/* PREVIEW */
+.preview{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:flex;
+justify-content:center;
+align-items:center;
+visibility:hidden;
+opacity:0;
+transition:0.3s;
+}
+
+.preview img{
+max-width:70%;
+max-height:80%;
+border-radius:15px;
+}
+
+.preview.show{
+visibility:visible;
+opacity:1;
+}
